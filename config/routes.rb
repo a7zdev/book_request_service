@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  post '/request' => 'requests#create'
+  get '/request' => 'requests#all'
+  get '/request/:id' => 'requests#find_by_book_id'
+  delete '/request/:id' => 'requests#delete_by_book_id'
+  get '/books' => 'books#all'
 end
